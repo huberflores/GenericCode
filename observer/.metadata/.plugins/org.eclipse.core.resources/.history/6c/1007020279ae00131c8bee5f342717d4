@@ -1,0 +1,19 @@
+package mc.cs.ut.ee;
+
+import mc.cs.ut.ee.MyObjModel.MyObj;
+
+public class Controller {
+
+	public static void main(String[] args) {
+		MyObj obj1 = new MyObj("obj1_attr1", "obj1_attr2");
+		MyObj obj2 = new MyObj("obj2_attr1", "obj2_attr2");
+		
+	    MyObjModel model = new MyObjModel();
+	    MyObserver observer = new MyObserver(model);
+	    
+	    for (MyObj obj : model.getObjects()) {
+	        obj.setAttribute1(obj.getAttribute1() + "modification");
+	    }
+	    
+	  }
+}

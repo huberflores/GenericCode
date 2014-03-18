@@ -1,0 +1,15 @@
+package mc.cs.ut.ee;
+
+public class MyObjModel {
+	public static final String ATTRIBUTE1 = "attr2";
+	public static final String ATTRIBUTE2 = "attr2";
+
+	private List<MyObj> persons = new ArrayList<MyObj>();
+	private List<PropertyChangeListener> listener = new ArrayList<PropertyChangeListener>();
+
+	
+	class MyObj{
+		
+	}
+	
+}

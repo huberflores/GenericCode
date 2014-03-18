@@ -1,0 +1,19 @@
+package mc.cs.ut.ee;
+
+import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MyObjModel {
+	public static final String ATTRIBUTE1 = "attr2";
+	public static final String ATTRIBUTE2 = "attr2";
+
+	private List<MyObj> objets = new ArrayList<MyObj>();
+	private List<PropertyChangeListener> listener = new ArrayList<PropertyChangeListener>();
+
+	
+	class MyObj{
+		
+	}
+	
+}
