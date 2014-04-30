@@ -1,6 +1,6 @@
 package mc.cs.ut.ee;
 
-import mc.cs.ut.ee.MyObjModel.MyObj;
+import mc.cs.ut.ee.MyObjModel.MyObj; 
 
 public class Controller {
 
