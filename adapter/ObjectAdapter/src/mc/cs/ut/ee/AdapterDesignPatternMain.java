@@ -15,5 +15,5 @@ public class AdapterDesignPatternMain {
   pl.printList(list);  
     
  }  
-}  
+}   
 
