@@ -1,5 +1,9 @@
 package mc.cs.ut.ee;
 
+/*
+* author Huber Flores
+*/
+
 public class SingletonManager {
 	public static SingletonManager instance;
 	
