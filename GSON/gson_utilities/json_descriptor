@@ -1,0 +1,12 @@
+{
+    "mobileApplication": "Angry birds",
+    "deviceID": "i9100",
+    "description": "definition of candidates for computational offloading",
+    "candidateComponents": [
+        "calculateMissile",
+        "render",
+        "draw"
+    ],
+    "field1": "value1",
+    "field2": "value2"
+}
