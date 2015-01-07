@@ -49,7 +49,7 @@ public class Activator {
 				
 				while(subIterator.hasNext()){
 					String subValue = subIterator.next();
-					System.out.println(subValue + " =" + map.get(value).get(subValue));
+					System.out.println(subValue + " = " + map.get(value).get(subValue));
 				}
 			
 				System.out.println("");  

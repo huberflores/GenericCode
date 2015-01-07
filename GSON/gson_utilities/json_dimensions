@@ -1,13 +1,12 @@
 {
     "what-to-offload": {
-        "name-methods": "calculate",
+        "nameMethods": "calculate",
         "device": "i9300",
-        "description": "",
-        "distance": 9563.8328713012
+        "description": "d1"
     },
     "when-to-offload": {
-        "network": "28688744",
-        "datasize": "testdata2",
-        "RTT": 2
+        "nameMethods": "recognize",
+        "device": "i9300",
+        "description": "d2"
     }
 }
