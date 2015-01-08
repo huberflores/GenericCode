@@ -1,0 +1,13 @@
+{
+    "what-to-offload": {
+        "nameMethods": "calculate",
+        "device": "i9300",
+        "description": "d1",
+        "network": ["512","1024", "4096"]
+    },
+    "when-to-offload": {
+        "nameMethods": "recognize",
+        "device": "i9300",
+        "description": "d2"
+    }
+}

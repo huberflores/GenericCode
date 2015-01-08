@@ -2,6 +2,10 @@ package ee.ut.cs.json.parsers;
 
 import com.google.gson.Gson;
 
+/*
+ * author Huber Flores
+ */
+
 public class Activator {
 
 	 private static GSONParser_1 data = null;

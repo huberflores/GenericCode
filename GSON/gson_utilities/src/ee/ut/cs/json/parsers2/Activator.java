@@ -4,6 +4,10 @@ import java.io.IOException;
 
 import com.google.gson.Gson;
 
+/*
+ * author Huber Flores
+ */
+
 public class Activator {
 
 	 private static GSONParser_2 data = null;
