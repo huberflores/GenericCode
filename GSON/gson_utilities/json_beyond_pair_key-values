@@ -1,0 +1,17 @@
+{
+    "what-to-offload": {
+        "nameMethods": ["calculate", "recognize","render"],
+        "device": ["i9300"],
+        "description": ["una descripcion"],
+        "distance": ["9563.8328713012"]
+    },
+    "when-to-offload": {
+        "network": ["28688744"],
+        "datasize": ["testdata2"],
+        "RTT": ["2"]
+    },
+    "where-to-offload": {
+        "server": ["m1.large", "m1.medium"],
+        "max":["3"]
+    }
+}
