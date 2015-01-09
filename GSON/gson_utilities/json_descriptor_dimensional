@@ -1,0 +1,22 @@
+{
+    "what-to-offload": { 
+        "nameMethods": ["calculate", "render"],
+        "energyConsumed": "800J",
+        "executionTimeApp": "2000ms"
+    },
+    "when-to-offload": {
+        "rTt": "7",
+        "dataSize": "58Kb"
+    },
+    "where-to-offload": {
+        "serverType": ["m1.small","m1.xlarge", "m1.medium"],
+        "executionTimeServer" : "100ms"
+    },
+    "which-to-offload": {
+        "device": "i9300"
+    },
+    "pre-cached":{
+    	"requestChecksum" : "324565436534543312345"
+    }
+    
+}
