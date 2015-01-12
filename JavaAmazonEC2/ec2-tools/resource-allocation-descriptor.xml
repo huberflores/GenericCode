@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<payload
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:noNamespaceSchemaLocation='components.xsd'>
+
+	<groups>
+		<group>
+			<name>apache</name>
+			<!-- define how many servers are allowed to run in this group -->
+			<minServers>1</minServers>
+			<maxServers>2</maxServers>
+			<!-- if the CPU lower threshold is exceeded, how many servers to remove -->
+			<amountToScaleDown>1</amountToScaleDown>
+			<!-- if the CPU upper threshold is exceeded, how many servers to clone -->
+			<amountToScaleUp>1</amountToScaleUp>
+			<!-- define CPU thresholds, when to scale up and down -->
+			<CPULowerThreshold>25</CPULowerThreshold>
+			<CPUUpperThreshold>65</CPUUpperThreshold>
+			<scalable>true</scalable>
+		</group>
+		<group>
+			<name>fixed</name>
+			<scalable>false</scalable>
+		</group>
+	</groups>
+	
+	<components>
+		<component id='ip-10-190-218-195.ec2.internal'>
+			<IP>10.190.218.195</IP>
+			<type>m1.small</type>
+			<scalingGroup>apache</scalingGroup>
+		</component>
+	</components>
+	
+</payload>
