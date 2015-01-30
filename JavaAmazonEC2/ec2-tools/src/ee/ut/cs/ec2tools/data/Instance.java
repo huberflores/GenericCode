@@ -10,6 +10,10 @@
 
 package ee.ut.cs.ec2tools.data;
 
+/*
+ *  author Huber Flores
+ */
+
 public class Instance {
 
 	public String id = "",
