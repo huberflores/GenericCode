@@ -1,5 +1,7 @@
 package ee.ut.cs.quick.functions;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Random;
 
 /**
@@ -16,9 +18,9 @@ public class RandomNumbers {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//GenerateDoubles(18.0, 33.0, 10);
+		GenerateDoubles(18.0, 33.0, 10);
 
-		GenerateInts(18,30,10);
+		//GenerateInts(18,30,10);
 	}
 	
 	
@@ -30,9 +32,9 @@ public class RandomNumbers {
 			double value = min + (max - min) * r.nextDouble();
 			
 			if (i==(times-1))		
-			   System.out.println(value);
+			   System.out.println(round(value,2));
 			else
-			   System.out.println(value+",");
+			   System.out.println(round(value,2)+",");
 		}
 		
 	}
@@ -52,8 +54,14 @@ public class RandomNumbers {
 			   System.out.println(value+",");
 			
 		}
-		
-		
+	}
+	
+	public static double round(double value, int decimals) {
+	    if (decimals < 0) throw new IllegalArgumentException();
+
+	    BigDecimal tmp = new BigDecimal(value);
+	    tmp = tmp.setScale(decimals, RoundingMode.HALF_UP);
+	    return tmp.doubleValue();
 	}
 
 }
