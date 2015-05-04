@@ -10,7 +10,7 @@ public class SerializableDemo extends Activity {
     	super.onCreate(savedInstanceState);  
     
     	TextView mTextView = new TextView(this);  
-    	Person mPerson = (Person)getIntent().getSerializableExtra("ee.ut.cs.exchange");  
+    	Person mPerson = (Person)getIntent().getSerializableExtra("serializable");  
     	mTextView.setText("You name is: " + mPerson.getName() + "/n"+  
     			"You age is: " + mPerson.getSurname());  
     

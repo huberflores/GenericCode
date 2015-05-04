@@ -83,7 +83,7 @@ public class DataExchange extends ActionBarActivity implements OnClickListener {
         mPerson.setSurname("Macario");  
         Intent mIntent = new Intent(this,SerializableDemo.class);  
         Bundle mBundle = new Bundle();  
-        mBundle.putSerializable("ee.ut.cs.exchange",mPerson);  
+        mBundle.putSerializable("serializable",mPerson);  
         mIntent.putExtras(mBundle);  
            
         startActivity(mIntent);  
@@ -96,7 +96,7 @@ public class DataExchange extends ActionBarActivity implements OnClickListener {
         mBook.setEdition(3);  
         Intent mIntent = new Intent(this,ParcelableDemo.class);  
         Bundle mBundle = new Bundle();  
-        mBundle.putParcelable("ee.ut.cs.exchange", mBook);  
+        mBundle.putParcelable("parcelable", mBook);  
         mIntent.putExtras(mBundle);  
            
         startActivity(mIntent);  
