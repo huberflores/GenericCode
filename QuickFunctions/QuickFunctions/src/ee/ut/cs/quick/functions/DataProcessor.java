@@ -5,10 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
 import ee.ut.cs.quick.utilities.CSVData;
+import ee.ut.cs.quick.utilities.TimeScheduler;
 
 public class DataProcessor {
 
@@ -114,8 +116,14 @@ public class DataProcessor {
 				System.out.println("Device: " + device + " has " + surrogates.size() + " surrogates to offload");
 				System.out.println("Surrogate availability:");
 				for (String surrogate: surrogates){
-					System.out.println("Surrogate: " + surrogate + "," + getSurrogateName(surrogate) + " - Availability: " + getSurrogateAvailability(surrogate, device));
+					//System.out.println("Surrogate: " + surrogate + "," + getSurrogateName(surrogate) + " - Availability: " + getSurrogateAvailability(surrogate, device));
 					//System.out.println("Surrogate: " + getSurrogateName(surrogate) + " - Availability: " + getSurrogateAvailabilityByInterface(surrogate, device, 2));
+					
+					
+					
+					//Availability per hour
+					System.out.println("Surrogate: " + surrogate + ", " + getSurrogateAvailability(surrogate, device));
+					getSurrogateAvailabilityByHour(surrogate, device);
 				}
 				
 				
@@ -156,6 +164,28 @@ public class DataProcessor {
 	
 	
 	public void getSurrogateAvailabilityByHour(String surrogate, String device){
+		List<String> intervals = CSVData.getDayHours();
+		TimeScheduler timeCheck;
+		
+		
+		for (String interval: intervals){
+			String[] hours = interval.split(",");
+			int cont = 0;
+			
+			for (CSVData data: hybrid){
+				if (data.getSurrogateAddress().equals(surrogate) && (data.getMyAddress().equals(device))){
+					timeCheck = new TimeScheduler(hours[0], hours[1]);
+					
+					if (timeCheck.checkAvailability(data.getTimestamp())==true){
+						cont++;
+					}
+					
+				}
+			}
+			
+			System.out.println(interval + ", " + cont);
+			
+		}
 		
 		
 		
@@ -198,6 +228,20 @@ public class DataProcessor {
 	}
 	
 	
+	public void showTimestamps(){
+		for (CSVData data: hybrid){
+			System.out.println(conversion(data.getTimestamp()));
+		}
+	}
+	
+	
+	public Date conversion(long milliSecondsTime){    
+		Date resultdate = new Date(milliSecondsTime);
+		
+		return resultdate;
+		
+	}
+	
 	
 	/**
 	 * @param args
@@ -209,6 +253,7 @@ public class DataProcessor {
 		csvReader.parseCSVFile();
 	
 		csvReader.displayStatistics();
+		//csvReader.showTimestamps();
 		
 		
 		/*for (String device: csvReader.getDevices()){

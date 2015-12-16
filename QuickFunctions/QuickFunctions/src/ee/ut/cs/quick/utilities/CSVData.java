@@ -1,5 +1,8 @@
 package ee.ut.cs.quick.utilities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CSVData {
 
 	long timestamp;
@@ -64,6 +67,38 @@ public class CSVData {
 	
 	public int getBatteryLevel(){
 		return this.batteryLevel;
+	}
+	
+	
+	public static List<String> getDayHours(){
+		List<String> intervals = new ArrayList<String>();
+		
+		intervals.add("00:00, 1:00");
+		intervals.add("1:00, 2:00");
+		intervals.add("2:00, 3:00");
+		intervals.add("3:00, 4:00");
+		intervals.add("4:00, 5:00");
+		intervals.add("5:00, 6:00");
+		intervals.add("6:00, 7:00");
+		intervals.add("7:00, 8:00");
+		intervals.add("8:00, 9:00");
+		intervals.add("9:00, 10:00");
+		intervals.add("10:00, 11:00");
+		intervals.add("11:00, 12:00");
+		intervals.add("12:00, 13:00");
+		intervals.add("13:00, 14:00");
+		intervals.add("14:00, 15:00");
+		intervals.add("15:00, 16:00");
+		intervals.add("16:00, 17:00");
+		intervals.add("17:00, 18:00");
+		intervals.add("18:00, 19:00");
+		intervals.add("19:00, 20:00");
+		intervals.add("20:00, 21:00");
+		intervals.add("21:00, 22:00");
+		intervals.add("22:00, 23:00");
+		intervals.add("23:00, 24:00");
+		
+		return intervals;
 	}
 	
 
