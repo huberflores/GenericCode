@@ -24,7 +24,8 @@ public class CSVData {
 		this.surrogateAddress = surrogateAddress;
 		
 		this.wifiRTT = Integer.parseInt(wifiRTT);
-		this.batteryLevel = Integer.parseInt(batteryLevel);
+		this.batteryLevel = Integer.parseInt(batteryLevel.split("\\.")[0]);
+	
 		
 		if (Integer.parseInt(wifidirect)==1){
 			this.networkInterface = 1;
