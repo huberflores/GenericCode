@@ -12,11 +12,13 @@ public class MilliSecondsToDate {
 	}
 	
 	
-	public void conversion(String sampleTime){
+	public static String conversion(String sampleTime){
 		long milliSecondsTime = new Long (sampleTime);
 		SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
 		Date resultdate = new Date(milliSecondsTime);
-		System.out.println(sdf.format(resultdate));
+		//System.out.println(sdf.format(resultdate));
+		
+		return resultdate.toString();
 	}
 
 	/**
@@ -25,7 +27,9 @@ public class MilliSecondsToDate {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		new MilliSecondsToDate().conversion("1450080257254");
+		
+		
+		System.out.println(MilliSecondsToDate.conversion("1451160000000"));
 
 	}
 

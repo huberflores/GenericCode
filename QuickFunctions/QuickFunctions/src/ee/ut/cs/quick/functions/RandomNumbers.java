@@ -18,9 +18,9 @@ public class RandomNumbers {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		GenerateDoubles(18.0, 33.0, 10);
+		//GenerateDoubles(0, 100, 24);
 
-		//GenerateInts(18,30,10);
+		GenerateInts(0,3000,24);
 	}
 	
 	
@@ -34,7 +34,7 @@ public class RandomNumbers {
 			if (i==(times-1))		
 			   System.out.println(round(value,2));
 			else
-			   System.out.println(round(value,2)+",");
+			   System.out.println(round(value,2)+"");
 		}
 		
 	}
@@ -50,9 +50,10 @@ public class RandomNumbers {
 			
 			if (i==(times-1))		
 				System.out.println(value);
-			else
-			   System.out.println(value+",");
-			
+			else{
+			  // System.out.println(value+",");
+				 System.out.println(value);
+			}
 		}
 	}
 	
