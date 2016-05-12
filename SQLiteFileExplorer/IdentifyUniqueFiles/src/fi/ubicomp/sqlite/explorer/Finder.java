@@ -19,7 +19,7 @@ import java.util.List;
 public class Finder {
 	
 	
-	private static String directory = "/home/huber/Desktop/source_code/db/final/sqlite-files/day10/";
+	private static String directory = "/home/huber/Desktop/source_code/db/final/sqlite-files/day2/";
 	
 		
 	public List<File> readFolder(File folder){
@@ -72,7 +72,9 @@ public class Finder {
 	public void exploreDatabaseFiles(){
 		List<File> files = readFolder(new File(directory));
 		String [] cases = {"48:59:29:06:D0:32","94:D8:59:5C:B6:2A", "9C:02:98:11:87:A9", "40:40:A7:10:C8:1D",
-							"9C:D9:17:6A:2C:3D", "38:0A:94:A3:EA:7B", "1C:66:AA:29:77:D0", "14:30:C6:AE:4A:1E"};
+							"9C:D9:17:6A:2C:3D", "38:0A:94:A3:EA:7B", "1C:66:AA:29:77:D0", "14:30:C6:AE:4A:1E", "A8:7C:01:D8:FA:76",
+							"E0:99:71:AF:61:B8", "B4:CE:F6:B7:54:A3", "BC:D1:D3:2F:12:31", "3C:97:0F:0F:E9:25", "F0:5B:7B:68:5B:7E", "E0:63:E5:51:76:17",
+							"38:2D:E8:7B:69:E4", "10:2A:B3:40:26:E0"};
 		
 		
 		
